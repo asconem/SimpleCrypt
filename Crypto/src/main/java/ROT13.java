@@ -85,7 +85,21 @@ public class ROT13  {
     }
 
     public static String rotate(String s, Character c) {
-        return null;
+        int index = 0;
+        for (; index < s.length(); index++) {
+            if(s.charAt(index) == c) {
+                break;
+            }
+        }
+
+        String rotate = "";
+        for (int j = 0; j < s.length(); j++, index++) {
+            if (index >= s.length()) {
+                index = 0;
+            }
+            rotate += s.charAt(index);
+        }
+        return rotate;
     }
 
 }
