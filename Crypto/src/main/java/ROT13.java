@@ -62,44 +62,11 @@ public class ROT13  {
     }
 
     public String decrypt(String text) {
-        String rotate = "";
-        for (Character c : text.toCharArray()) {
-            if(Character.isAlphabetic(c)) {
-                int code = c + difference;
-                if (Character.isUpperCase(c)) {
-                    if (code > 'Z') {
-                        code = ('A' - 1) + (code - 'Z');
-                    }
-                } else {
-                    if (code > 'z') {
-                        code = ('a' - 1) + (code - 'z');
-                    }
-                }
-                rotate += (char) code;
-            } else {
-                rotate += c;
-            }
-        }
-        System.out.println(rotate);
-        return rotate;
+        return null;
     }
 
     public static String rotate(String s, Character c) {
-        int index = 0;
-        for (; index < s.length(); index++) {
-            if(s.charAt(index) == c) {
-                break;
-            }
-        }
-
-        String rotate = "";
-        for (int j = 0; j < s.length(); j++, index++) {
-            if (index >= s.length()) {
-                index = 0;
-            }
-            rotate += s.charAt(index);
-        }
-        return rotate;
+        return null;
     }
 
 }
